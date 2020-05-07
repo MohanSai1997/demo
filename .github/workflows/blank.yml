@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Get remote git
       run: |
+        pwd
         ls -l
         git remote -v
         
