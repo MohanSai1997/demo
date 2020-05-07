@@ -11,6 +11,6 @@ jobs:
     - name: Get remote git
       run: |
         pwd
-        ls -l
-        git remote -v
+    - name: show files
+      run: ls -l
         
