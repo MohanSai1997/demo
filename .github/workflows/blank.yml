@@ -16,7 +16,5 @@ jobs:
       run: pwd
     - name: get from github
       run: echo github
-    - name: get message
-      env: 
-        GITHUB_CONTEXT: ${{ toJson(github) }} 
-      run: echo "$GITHUB_CONTEXT"
+    - name: get message 
+      run: echo ${{ github.events.head_commit.message }}
