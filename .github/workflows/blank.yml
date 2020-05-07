@@ -16,5 +16,5 @@ jobs:
     - name: create branch
       run: git branch fake
     - name: push brach
-      run: git push https://MohanSai1997:${{ secrets.DEMO_SECRET }}@github.com:MohanSai1997/demo.git
+      run: git push origin fake
         
