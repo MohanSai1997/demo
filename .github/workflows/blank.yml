@@ -17,4 +17,6 @@ jobs:
     - name: get from github
       run: echo github
     - name: get message 
-      run: echo ${{ github }}
+      run: echo ::set-env name=commitmsg::${{ github.event.head_commit.message }}
+    - name: show content
+      run: echo $commitmsg
