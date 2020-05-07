@@ -17,6 +17,7 @@ jobs:
       run: git clone https://github.com/fake-orgn/new.git
     - name: do actions
       run: |
+        pwd
         cd $(pwd)/new
         touch hi.txt
         git add --all
