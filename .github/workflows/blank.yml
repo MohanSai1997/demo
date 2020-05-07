@@ -33,6 +33,8 @@ jobs:
       
     - name: Adding the files to remote repo
       run: |
+        pwd
+        ls -la
         cd new/
         git add --all
       
