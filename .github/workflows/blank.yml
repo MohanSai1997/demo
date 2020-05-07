@@ -20,7 +20,7 @@ jobs:
       run: |
         pwd
         cd $(pwd)/new
-        touch hi.txt
+        touch hil
         git add --all
         git commit -m "initial commit"
         git push origin master
