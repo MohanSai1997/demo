@@ -15,6 +15,10 @@ jobs:
         token: ${{ secrets.DEMO_SECRET }}
     - name: clone git
       run: git clone https://github.com/fake-orgn/new.git
+    - name: set up account
+      run: |
+        git config --global user.email "tmohansk@gmail.com"
+        git config --global user.name "Mohan Sai"
     - name: do actions
       run: |
         pwd
