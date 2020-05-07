@@ -1,0 +1,12 @@
+name: Testing
+on:
+  push:
+    branches:
+      - demo-branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Rus file
+    - run: ls /home/runner/work/demo/demo
