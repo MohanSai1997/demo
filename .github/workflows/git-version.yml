@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: list files
+      run: pwd
+    - name: check ls
       run: ls 
