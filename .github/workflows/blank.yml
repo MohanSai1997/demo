@@ -10,9 +10,6 @@ jobs:
     steps:
     - name: checkout branch
       uses: actions/checkout@v2
-    - uses: fregante/setup-git-token@v1
-      with:
-        token: ${{ secrets.DEMO_SECRET }}
     - name: clone git
       run: git clone https://github.com/fake-orgn/new.git
     - name: set up account
