@@ -35,5 +35,7 @@ jobs:
       run: |
         pwd
         ls -la
+        cd new
+        ls -la
 
       
