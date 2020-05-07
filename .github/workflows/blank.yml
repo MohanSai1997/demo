@@ -15,5 +15,7 @@ jobs:
         pwd
         cd ..
     - name: show files
-      run: ls -l
+      run: |
+        pwd
+        ls -l
         
