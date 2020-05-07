@@ -8,10 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: show data
-      run: ls -l
-    - name: change directory
-      run: pwd
     - name: Get remote git
-      run: git remote -v
+      run: |
+        cd demo
+        ls -l
+        git remote -v
         
