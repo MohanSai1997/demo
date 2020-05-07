@@ -44,4 +44,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check file
-        run: pwd
+        run: ls -la $(pwd)
