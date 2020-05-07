@@ -31,17 +31,16 @@ jobs:
     - name: Copying files from present repo to remote repo
       run: cp -r demo/* new/
       
-    - name: Check files in demo folder
-      run: ls -la demo/
+    - name: Adding the files to remote repo
+      run: |
+        cd new/
+        git add --all
       
-    - name: Check files in New folder
-      run: ls -la new/
+    - name: Commiting the files to remote repo
+      run: |
+        cd new/
+        git commit -m ${{ github.event.head_commit.message }}
+    
+    - name: Pusing the files to remote repo
+      run: git push origin master
       
-    - name: get message 
-      run: echo ${{ github.event.head_commit.message }}
-      
-  Test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: check file
-        run: ls -la $(pwd)
