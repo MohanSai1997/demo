@@ -24,6 +24,7 @@ jobs:
         ls -la
     - name: feteh all branches
       run: |
+        pwd
         git fetch -all
         git branch fake-branch
         git checkout fake-branch
