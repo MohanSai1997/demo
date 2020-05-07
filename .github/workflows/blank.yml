@@ -15,5 +15,7 @@ jobs:
         token: ${{ secrets.DEMO_SECRET }}
     - name: add repo
       run: git remote add fake-origin https://github.com/fake-orgn/new.git
-    - name: add data
-      run: git remote -v
+    - name: commit
+      run: git commit -m "initial commit"
+    - name: pus
+      run: git push fake-origin master
