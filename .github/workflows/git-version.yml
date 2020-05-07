@@ -2,7 +2,7 @@ name: Testing
 on:
   push:
     branches:
-      - master
+      - demo-branch
 
 jobs:
   build:
