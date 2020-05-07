@@ -39,6 +39,6 @@ jobs:
     - name: Commiting the files to remote repo
       run: |
         cd new
-        ls -la
+        git commit -m "${{ github.event.head_commit.message }}"
 
       
