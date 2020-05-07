@@ -20,7 +20,7 @@ jobs:
     - name: change directory
       run: |
         cd $(pwd)/demo
-        git fetch -all
+        git fetch --all
         git branch fake-branch
         git checkout fake-branch
     - name: add file
