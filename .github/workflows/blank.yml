@@ -38,7 +38,7 @@ jobs:
     
     - name: Commiting the files to remote repo
       run: |
-        pwd
+        cd new
         ls -la
 
       
