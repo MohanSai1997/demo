@@ -14,5 +14,9 @@ jobs:
       run: pwd
     - name: check dir 2
       run: pwd
+    - name: get from github
+      run: echo github
     - name: get message
-      run: echo $GITHUB_CONTEXT
+      env: 
+        GITHUB_CONTEXT: ${{ toJson(github) }} 
+        run: echo "$GITHUB_CONTEXT"
