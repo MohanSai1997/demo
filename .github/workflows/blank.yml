@@ -7,13 +7,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /home/runner/work
     steps:
     - name: action checkout
       uses: actions/checkout@v2
     - name: check dir
       run: pwd
-    - name: check dir 2
-      run: pwd
+    - name: ls
+      run: ls -la
     - name: get from github
       run: echo github
     - name: get message 
