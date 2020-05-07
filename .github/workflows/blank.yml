@@ -7,21 +7,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /home/workdir/demo
     steps:
     - name: checkout branch
       uses: actions/checkout@v2
-    - name: clone git
-      run: git clone https://github.com/fake-orgn/new.git
-    - uses: fregante/setup-git-token@v1
-      with:
-        token: ${{ secrets.DEMO_SECRET }}
-    - name: set up account
-      run: |
-        git config --global user.email "tmohansk@gmail.com"
-        git config --global user.name "Mohan Sai"
-    - name: do actions
-      run: |
-        cd $(pwd)/new
-        pwd
-    - name: see pwd
+    - name: check dir
       run: pwd
+    - name: check dir 2
+      run: pwd
+    - name: get message
+      run: echo "$GITHUB_CONTEXT"
