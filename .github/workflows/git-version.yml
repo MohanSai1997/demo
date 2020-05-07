@@ -8,9 +8,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Pull repo
-      run: git clone https://github.com/MohanSai1997/demo.git
-    - name: cd into repo
-      run: cd demo
-    - name: list the files
-      run: ls
+    - name: list files
+      run: ls 
