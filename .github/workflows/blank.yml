@@ -10,7 +10,6 @@ jobs:
     steps:
     - name: Get remote git
       run: |
-        cd demo
         ls -l
         git remote -v
         
