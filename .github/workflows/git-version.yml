@@ -1,0 +1,12 @@
+name: Testing
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check github version
+      run: git --version
