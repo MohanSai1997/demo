@@ -8,6 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: Rus file
       run: |
         git config --global user.email "tmohansk@gmail.com"
@@ -20,6 +21,9 @@ jobs:
     - name: change directory
       run: |
         cd $(pwd)/demo
+    - name: Fetch
+      run: |
+        pwd
         git fetch --all
         git branch fake-branch
         git checkout fake-branch
