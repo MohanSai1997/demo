@@ -8,26 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Rus file
-      run: |
-        git config --global user.email "tmohansk@gmail.com"
-        git config --global user.name "mohansai1997"
-    - name: Pull repo
-      run: |
-        git clone https://github.com/MohanSai1997/demo.git
-    - name: get data
+    - name: show data
       run: ls -l
     - name: change directory
-      run: |
-        cd $(pwd)/demo
-    - name: Fetch
-      run: |
-        pwd
-        git fetch --all
-        git branch fake-branch
-        git checkout fake-branch
-        echo "mohan" >> fake.text
-        git add --all
-        git commit -m "fake file added"
-        git push origin master
+      run: pwd
+    - name: Get remote git
+      run: git remote -v
         
