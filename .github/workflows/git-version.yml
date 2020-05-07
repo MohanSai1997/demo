@@ -13,4 +13,4 @@ jobs:
     - name: cd into repo
       run: cd demo
     - name: list the files
-      run: ll 
+      run: ls
