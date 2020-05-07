@@ -7,9 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: /home
     steps:
     - name: action checkout
       uses: actions/checkout@v2
@@ -18,4 +15,4 @@ jobs:
     - name: check dir 2
       run: pwd
     - name: get message
-      run: echo "$GITHUB_CONTEXT"
+      run: echo $GITHUB_CONTEXT
