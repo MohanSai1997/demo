@@ -21,7 +21,7 @@ jobs:
         git config --global user.name "Mohan Sai"
     - name: do actions
       run: |
-        pwd
         cd $(pwd)/new
+        pwd
     - name: see pwd
       run: pwd
