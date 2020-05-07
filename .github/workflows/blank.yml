@@ -21,7 +21,7 @@ jobs:
       run: |
         cd $(pwd)/demo
         pwd
-        ls -l
+        ls -la
     - name: feteh all branches
       run: |
         git fetch -all
