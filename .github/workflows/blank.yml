@@ -14,7 +14,7 @@ jobs:
       with:
         token: ${{ secrets.DEMO_SECRET }}
     - name: create branch
-      run: git branch fake
+      run: git branch fake-dedddd
     - name: push brach
-      run: git push origin fake
+      run: git push origin fake-dedddd
         
