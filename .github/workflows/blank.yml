@@ -14,7 +14,7 @@ jobs:
       run: git clone https://github.com/fake-orgn/new.git
     - uses: fregante/setup-git-token@v1
       with:
-        token: ${{ secrets.DEMO }}
+        token: ${{ secrets.DEMO_SECRET }}
     - name: set up account
       run: |
         git config --global user.email "tmohansk@gmail.com"
@@ -23,7 +23,5 @@ jobs:
       run: |
         pwd
         cd $(pwd)/new
-        touch hi2
-        git add --all
-        git commit -m "initial commit"
-        git push origin master
+    - name: see pwd
+      run: pwd
