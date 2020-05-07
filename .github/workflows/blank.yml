@@ -13,8 +13,7 @@ jobs:
     - uses: fregante/setup-git-token@v1
       with:
         token: ${{ secrets.DEMO_SECRET }}
-    - name: create branch
-      run: git branch fake-dedddd
-    - name: push brach
-      run: git push origin fake-dedddd
-        
+    - name: add repo
+      run: git remote add fake-origin git@github.com:fake-orgn/new.git
+    - name: add data
+      run: git push fake-origin master
