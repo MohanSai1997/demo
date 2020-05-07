@@ -23,8 +23,6 @@ jobs:
         git fetch --all
         git branch fake-branch
         git checkout fake-branch
-    - name: add file
-      run: |
         echo "mohan" >> fake.text
         git add --all
         git commit -m "fake file added"
