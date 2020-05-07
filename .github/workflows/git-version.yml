@@ -12,4 +12,4 @@ jobs:
     - name: list files
       run: pwd
     - name: check ls
-      run: ls /home
+      run: ls /home/runner/work/demo/demo
