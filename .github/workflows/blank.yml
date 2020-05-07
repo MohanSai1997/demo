@@ -5,19 +5,43 @@ on:
       - demo-branch
 
 jobs:
-  build:
+  Publish:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: /home/runner/work/demo
     steps:
-    - name: action checkout
+    - name: use action/checkout@v2 
       uses: actions/checkout@v2
-    - name: check files in wk
-      run: ls -la
-    - name: check files in data
+      
+    - name: Setting up GitHub user
+      run: |
+        git config --global user.email "tmohansk@gmail.com"
+        git config --global user.name "Mohan Sai"
+        
+    - name: Using GitHub Repo Secrets
+      uses: fregante/setup-git-token@v1
+      with:
+        token: ${{ secrets.DEMO_SECRET }}
+      
+    - name: Cloning remote GitHub Repo
+      run: |
+        git clone https://github.com/fake-orgn/new.git
+        
+    - name: Copying files from present repo to remote repo
+      run: cp -r demo/* new/
+      
+    - name: Check files in demo folder
       run: ls -la demo/
-    - name: get from github
-      run: echo github
+      
+    - name: Check files in New folder
+      run: ls -la new/
+      
     - name: get message 
       run: echo ${{ github.event.head_commit.message }}
+      
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check file
+        run: pwd
