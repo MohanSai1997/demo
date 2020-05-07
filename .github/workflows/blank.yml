@@ -16,7 +16,7 @@ jobs:
     - name: check files in wk
       run: ls -la
     - name: check files in data
-      run: ls -la data/
+      run: ls -la demo/
     - name: get from github
       run: echo github
     - name: get message 
