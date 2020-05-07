@@ -19,8 +19,9 @@ jobs:
       run: ls -l
     - name: change directory
       run: |
-        cd ./demo
+        cd $(pwd)/demo
         pwd
+        ls -l
     - name: feteh all branches
       run: |
         git fetch -all
