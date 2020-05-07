@@ -17,6 +17,4 @@ jobs:
     - name: get from github
       run: echo github
     - name: get message 
-      run: echo ::${{ github.event.head_commit.message }}
-    - name: show content
-      run: echo $commitmsg
+      run: echo ${{ github.event.head_commit.message }}
