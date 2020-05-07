@@ -8,14 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Get remote git
-      run: |
-        git remote -v
-        pwd
-        cd ..
-    - name: show files
-      run: |
-        pwd
-        ls -l
+    - name: checkout branch
+      uses: actions/checkout@v2
+    - name: make dir
+      run: ls -la
         
