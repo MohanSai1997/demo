@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Rus file
-      run: ls /home/runner/work
+      run: ls /home/runner/work/demo
